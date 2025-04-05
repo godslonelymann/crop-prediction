@@ -85,7 +85,7 @@ function App() {
         </div>
 
         <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-          <form onSubmit={handleSubmit} className="grid md:grid-cols-3 gap-6 mb-8">
+          <form onSubmit={handleSubmit} className="grid md:grid-cols-4 gap-6 mb-8">
             <div className="space-y-2">
               <label htmlFor="cropName" className="block text-sm font-medium text-gray-700">
                 Crop Name
@@ -119,8 +119,8 @@ function App() {
               </select>
             </div>
 
-            <div className="space-y-2">
-              <label htmlFor="basePrice" className="block text-sm font-medium text-gray-700">
+            <div className="space-y-2 ">
+              <label htmlFor="basePrice" className=" text-sm font-medium text-gray-700">
                 Base Price (₹/quintal)
               </label>
               <input
@@ -132,16 +132,18 @@ function App() {
                 min="1"
                 required
               />
+              
             </div>
-
-            <div className="md:col-span-3">
+            <div className="md:mt-8">
               <button
                 type="submit"
-                className="w-full md:w-auto px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                className="w-full md:w-auto px-14 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
               >
                 Update Prediction
               </button>
             </div>
+
+            
           </form>
 
           {cropName && insights && (
